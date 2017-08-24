@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Board.css';
 import Card from '../card/Card';
+import Reset from '../reset/Reset';
 
 const tools = [
   { name: 'Bower', logo: require('../../assets/bower.png') },
@@ -132,6 +133,9 @@ export default class Board extends Component {
             )}
           </div>
         )}
+        <Reset
+          reset={() => this.shuffle_()}
+        />
       </div>
     );
   }
